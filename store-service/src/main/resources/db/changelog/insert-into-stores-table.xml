@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="insert-intostore-table" author="Elena">
+        <insert tableName="stores">
+            <column name="name" value="Пятерочка"/>
+            <column name="description" value="Продукты и товары для дома"/>
+            <column name="address" value="Ул. Пушкина д.Колотушкина"/>
+            <column name="phone" value="86666666666"/>
+        </insert>
+
+        <insert tableName="stores">
+            <column name="name" value="Ашан"/>
+            <column name="description" value="Все для всего"/>
+            <column name="address" value="Ул. Колотушкина д.Пушкина"/>
+            <column name="phone" value="89999999999"/>
+        </insert>
+
+        <insert tableName="stores">
+            <column name="name" value="Рыбин гуд"/>
+            <column name="description" value="Рыба и морепродукты"/>
+            <column name="address" value="Ул. Морячковая"/>
+            <column name="phone" value="84938569345"/>
+        </insert>
+
+        <insert tableName="stores">
+            <column name="name" value="Чайзенберг"/>
+            <column name="description" value="Чай и кофе"/>
+            <column name="address" value="Ул. Тяжкая"/>
+            <column name="phone" value="89335792305"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

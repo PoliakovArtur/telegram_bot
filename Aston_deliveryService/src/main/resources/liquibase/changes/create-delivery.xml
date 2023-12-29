@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="create-table-delivery" author="yellowTeam">
+        <sql>
+            CREATE TABLE deliveries
+            (
+                id                     serial PRIMARY KEY,
+                order_id               integer     NOT NULL,
+                delivery_priority      varchar(30) NOT NULL,
+                courier_id             uuid        NOT NULL,
+                tg_chat_client_id      integer     NOT NULL,
+                tg_chat_courier_id     integer     NOT NULL,
+                delivery_status        varchar(30) NOT NULL,
+                delivery_time_creation timestamp   NOT NULL
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>

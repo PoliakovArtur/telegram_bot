@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  goods-service:
+    build: .
+    ports:
+      - "7777:7777"
+    depends_on:
+      - goods-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://goods-db:5432/
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+
+  goods-db:
+    image: postgres:14-alpine
+    ports:
+      - "6542:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=goods_db

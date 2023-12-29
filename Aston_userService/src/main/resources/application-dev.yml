@@ -1,0 +1,40 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:init.sql
+  cache:
+    jcache:
+      provider: org.ehcache.jsr107.EhcacheCachingProvider
+    cache-names: courierCache
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
+    properties:
+      org:
+        quartz:
+          jobStore:
+            isClustered: false
+          scheduler:
+            instanceName: MyScheduler
+          threadPool:
+            threadCount: 2
+server:
+  port: 8081
+
+

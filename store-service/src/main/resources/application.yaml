@@ -1,0 +1,30 @@
+server:
+#  port: 0
+  port: 8888
+
+spring:
+  application:
+    name: "store-service"
+
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: postgres
+
+  liquibase:
+    change-log: db/changelog/changelog.xml
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8082/eureka
+

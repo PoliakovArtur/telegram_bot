@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="1" author="greenteam">
+        <insert tableName="products">
+            <column name="name" value="Book1"/>
+            <column name="description" value="Description for Book1"/>
+            <column name="quantity" value="10"/>
+            <column name="price" value="19.99"/>
+            <column name="store_id" value="1"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Book2"/>
+            <column name="description" value="Description for Book2"/>
+            <column name="quantity" value="20"/>
+            <column name="price" value="29.99"/>
+            <column name="store_id" value="1"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Book3"/>
+            <column name="description" value="Description for Book3"/>
+            <column name="quantity" value="30"/>
+            <column name="price" value="39.99"/>
+            <column name="store_id" value="1"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Book4"/>
+            <column name="description" value="Description for Book4"/>
+            <column name="quantity" value="40"/>
+            <column name="price" value="49.99"/>
+            <column name="store_id" value="1"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Book5"/>
+            <column name="description" value="Description for Book5"/>
+            <column name="quantity" value="50"/>
+            <column name="price" value="59.99"/>
+            <column name="store_id" value="1"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Book6"/>
+            <column name="description" value="Description for Book6"/>
+            <column name="quantity" value="60"/>
+            <column name="price" value="69.99"/>
+            <column name="store_id" value="1"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Book7"/>
+            <column name="description" value="Description for Book7"/>
+            <column name="quantity" value="70"/>
+            <column name="price" value="79.99"/>
+            <column name="store_id" value="1"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Book8"/>
+            <column name="description" value="Description for Book8"/>
+            <column name="quantity" value="80"/>
+            <column name="price" value="89.99"/>
+            <column name="store_id" value="1"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Book9"/>
+            <column name="description" value="Description for Book9"/>
+            <column name="quantity" value="90"/>
+            <column name="price" value="99.99"/>
+            <column name="store_id" value="1"/>
+        </insert>
+        <insert tableName="products">
+            <column name="name" value="Book10"/>
+            <column name="description" value="Description for Book10"/>
+            <column name="quantity" value="100"/>
+            <column name="price" value="109.99"/>
+            <column name="store_id" value="2"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
